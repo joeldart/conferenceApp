@@ -28,8 +28,21 @@
             <a href="#mySchedule" data-role="button" data-icon="star" class="ui-btn-right">My Schedule</a>
         </div>
         <div data-role="content">
-        
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider" 
+                    data-bind="template: {name: 'sessionTmpl', foreach: mondaySessions, insertAfter: true, afterRenderAll: refreshListView}"
+                    >Monday</li>
+                <li data-role="list-divider">Tuesday</li>
+            </ul>
         </div>
+        <script id="sessionTmpl" type="text/html">
+            <li data-bind="attr: { 'data-icon': favoriteIcon}, click: toggleSelected" class="item">
+                <a>
+                    <h3 data-bind="text: title"></h3>
+                    <p data-bind="text: name"></p>
+                </a>
+            </li>
+        </script>
     </div>
     <div id="mySchedule" data-role="page">
         <div data-role="header">
