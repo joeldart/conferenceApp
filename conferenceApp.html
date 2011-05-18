@@ -40,6 +40,7 @@
                 <a>
                     <h3 data-bind="text: title"></h3>
                     <p data-bind="text: name"></p>
+                    <p data-bind="text: begin"></p>
                 </a>
             </li>
         </script>
@@ -49,7 +50,11 @@
             <h1>My Schedule</h1>
         </div>
         <div data-role="content">
-        
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider"
+                    data-bind="template: {name: 'sessionTmpl', foreach: myMondaySessions, insertAfter: true, afterRenderAll: refreshListView}"
+                    >Monday</li>
+            </ul>
         </div>
     </div>
     <div id="map" data-role="page">
