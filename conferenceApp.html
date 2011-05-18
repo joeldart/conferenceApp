@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="jquery.mobile-1.0a4.1.css" rel="Stylesheet" type="text/css"/>
+    <script src="jquery-1.5.2.js" ></script>
+    <script src="jquery.mobile-1.0a4.1.js"></script>
+    <script src="jquery.tmpl.js"></script>
+    <script src="knockout.debug.joel.js"></script>
+    <script src="conferenceApp.js"></script>
+</head>
+<body>
+    <div id="mainPage" data-role="page">
+        <div data-role="header">
+            <h1>Conference App</h1>
+            <a href="#mySchedule" data-role="button" data-icon="star" class="ui-btn-right">My Schedule</a>
+        </div>
+        <div data-role="content">
+            <ul data-role="listview">
+                <li><a href="#fullSchedule">Full Schedule</a></li>
+                <li><a href="#mySchedule">My Schedule</a></li>
+                <li><a href="#map">Map</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="fullSchedule" data-role="page">
+        <div data-role="header">
+            <h1>Full Schedule</h1>
+            <a href="#mySchedule" data-role="button" data-icon="star" class="ui-btn-right">My Schedule</a>
+        </div>
+        <div data-role="content">
+        
+        </div>
+    </div>
+    <div id="mySchedule" data-role="page">
+        <div data-role="header">
+            <h1>My Schedule</h1>
+        </div>
+        <div data-role="content">
+        
+        </div>
+    </div>
+    <div id="map" data-role="page">
+        <div data-role="header">
+            <h1>Map</h1>
+        </div>
+        <div data-role="content">
+            <p>Map goes here</p>
+        </div>
+    </div>
+</body>
+</html>
